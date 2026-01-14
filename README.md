@@ -170,7 +170,14 @@ Connects to Immich API endpoints:
 
 ## 📸 Screenshots
 
-*(Add screenshots here showing Dashboard, Queue Management, Analytics views)*
+### Main Dashboard
+![Screenshot 1](images/screenshot2.png)
+
+### Settings
+![Screenshot 2](images/screenshot1.png)
+
+### Queue Manager
+![Screenshot 3](images/screenshot3.png)
 
 ## 🤝 Contributing
 
