@@ -68,9 +68,27 @@ A comprehensive, native macOS application for monitoring and managing [Immich](h
 2. **Install:**
    - Double-click the zip to extract
    - Drag `ImmichJobQueueVisualizer.app` to your Applications folder
-   - Right-click the app and select "Open" (first time only due to macOS security)
 
-3. **Configure:**
+3. **First Launch (Gatekeeper Bypass):**
+
+   This app is ad-hoc signed but not notarized with Apple, so macOS Gatekeeper will block it on first launch. Choose one of these methods to open it:
+
+   **Option A: Right-click to Open (Recommended)**
+   - Right-click (or Control-click) on `ImmichJobQueueVisualizer.app`
+   - Select **"Open"** from the context menu
+   - Click **"Open"** in the dialog that appears
+   - The app will now open and be remembered as safe
+
+   **Option B: System Settings**
+   - Try to open the app normally (it will be blocked)
+   - Go to **System Settings** → **Privacy & Security**
+   - Scroll down to find the message about the blocked app
+   - Click **"Open Anyway"**
+   - Enter your password if prompted
+
+   > **Note:** You only need to do this once. After the first successful launch, macOS will remember your choice and the app will open normally.
+
+4. **Configure:**
    - Press `Cmd+,` to open Settings
    - Enter your Immich server URL and API key
    - Click "Test Connection" and "Save Settings"
@@ -194,7 +212,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 ## 🐛 Known Issues
 
 - Immich API structure may vary between versions - tested with current Immich releases
-- First-time launch requires right-click → Open due to unsigned app bundle
+- First-time launch requires Gatekeeper bypass (right-click → Open) since the app is ad-hoc signed but not notarized with Apple. See [Installation](#-installation) for detailed instructions.
 - Some advanced features (WebSocket, Prometheus export) are designed but not yet implemented
 
 ## 🗺️ Roadmap
